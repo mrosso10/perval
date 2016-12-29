@@ -19,7 +19,7 @@ Hanami.configure do
     #    adapter :sql, 'mysql://localhost/perval_development'
     #
     # adapter :sql, ENV['DATABASE_URL']
-    adapter :sql, 'postgres://agc:agc@localhost/perval_development'
+    adapter :sql, 'postgres://perval:perval@localhost/perval_development'
 
     ##
     # Migrations
