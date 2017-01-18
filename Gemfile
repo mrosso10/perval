@@ -27,3 +27,7 @@ end
 group :production do
   # gem 'puma'
 end
+
+gem 'hanami-bootstrap'
+gem 'jquery-hanami'
+gem 'sass'

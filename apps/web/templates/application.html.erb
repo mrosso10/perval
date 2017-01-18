@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= stylesheet 'bootstrap','custom' %>
+    <%= javascript 'bootstrap', 'jquery' %>
+
     <title>Web</title>
     <%= favicon %>
   </head>
   <body>
-    <h1>Las cosas</h1>
+    <%= render template: 'home/header' %>
+
     <%= yield %>
   </body>
 </html>
