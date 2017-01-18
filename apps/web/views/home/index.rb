@@ -7,7 +7,7 @@ module Web::Views::Home
       compile true
 
       sources << [
-        'web/assets',
+        'web/assets/stylesheets',
       ]
     end
 

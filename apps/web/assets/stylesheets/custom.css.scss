@@ -1,0 +1,47 @@
+
+
+.navbar {
+  height:4em;
+  margin-bottom: 0;
+  background: rgba(255, 255, 255,0.9);
+  border-color: transparent;
+  font-size: 1em;
+
+  .navbar-collapse {
+    ul {
+      margin:0;
+      margin-left: 20%;
+      li {
+          padding-left:1em !important;
+          padding-right:1em !important;
+          padding-top:1.5em;
+      }
+    }
+  }
+}
+
+
+.img-brand {
+  margin-top: -1.5em;
+  height: 9em;
+}
+
+#welcome {
+  height:100vh;
+  background: url('/assets/fondo-01.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  .logo-home { 
+    margin-top:-18em;
+    margin-bottom: -15em;
+  }  
+  hr {
+    margin-left: 45%;
+    margin-right: 45%;
+  }
+}
+
+
