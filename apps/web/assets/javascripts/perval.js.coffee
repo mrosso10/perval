@@ -24,4 +24,4 @@ $(document).ready ->
     offset = 0 unless offset > 0
     $(document).scroll ->
       x = $(this).scrollTop()
-      $(section).css('background-position','50% '+parseInt(offset-x*1.2)+'px')
+      $(section).css('background-position','50% '+parseInt(offset-x*1.3)+'px')
