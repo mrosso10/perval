@@ -41,13 +41,13 @@ hr {
 }
 
 #welcome {
-  height:100vh;
   background: url('/assets/fondo-01.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: white;
+  padding-bottom: 4em;
   .logo-home { 
     margin-top:-18em;
     margin-bottom: -15em;
