@@ -7,14 +7,16 @@
     <%= stylesheet 'bootstrap' %>
     <%= stylesheet 'custom' %>
     <%= stylesheet 'font-awesome' %>
-    <%= javascript 'bootstrap', 'jquery' %>
+    <%= javascript 'jquery', 'bootstrap', 'perval' %>
 
     <title>Perval</title>
     <%= favicon %>
   </head>
   <body>
-    <%= render template: 'home/header' %>
+    <div class="xcontainer-fluid">
+      <%= render template: 'home/header' %>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 </html>

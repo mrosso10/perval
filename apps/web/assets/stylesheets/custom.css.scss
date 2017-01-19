@@ -1,59 +1,126 @@
 
 $main-pink: #cc0066;
 
+h1 {
+  font-size: 59px;
+}
+
+.bold {
+  font-weight: bold;
+}
 
 hr { 
   margin-left: 45%;
   margin-right: 45%;
   border-color: $main-pink;
 }
+  .icon-bar {
+    border-bottom: 2px solid black;
+  }
 
+.barra-navegacion {
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+  width: 100%;
+  background-color: rgba(255, 255, 255,0.9);
+  .container {
+    display: flex;
 
-.navbar {
-  height:4em;
-  margin-bottom: 0;
-  background: rgba(255, 255, 255,0.9);
-  border-color: transparent;
-  font-size: 1em;
+    > div {
+      display: inline-block;
+      vertical-align: top;
+      flex: 1;
+    }
+  }
+  .barra-left {
+    height: 50px;
 
-  .navbar-collapse {
-    ul {
-      margin:0;
-      margin-left: 20%;
-      li {
-          padding-left:1em ;
-          padding-right:1em ;
-          padding-top:1.3em;
+    .img-brand {
+      margin-top: -2.9em;
+      height: 11em;
+    }
+  }
+  .barra-right {
+    font-size: 19px;
+  }
+  ul {
+    margin-bottom: 0;
+    line-height: 50px;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+
+      a, i {
+        color: #616161;
       }
-      li.separator{
-        padding-top: 1.2em;
-        padding-left:0;
-        padding-right:0;
+      a {
+        vertical-align: sub;
+        font-weight: bold;
       }
     }
   }
 }
 
+// .navbar {
+//   height:4em;
+//   margin-bottom: 0;
+//   background: rgba(255, 255, 255,0.9);
+//   border-color: transparent;
+//   font-size: 1em;
 
-.img-brand {
-  margin-top: -1.5em;
-  height: 9em;
-}
+
+//   .navbar-collapse {
+//     ul {
+//       margin:0;
+//       margin-left: 20%;
+//       li {
+//           padding-left:1em ;
+//           padding-right:1em ;
+//           padding-top:1.3em;
+//       }
+//       li.separator{
+//         padding-top: 1.2em;
+//         padding-left:0;
+//         padding-right:0;
+//       }
+//     }
+//   }
+// }
+
 
 #welcome {
-  background: url('/assets/fondo-01.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('/assets/fondo-02.jpg') fixed; 
+  background-position: 50% 0%;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
   color: white;
-  padding-bottom: 4em;
-  .logo-home { 
-    margin-top:-18em;
-    margin-bottom: -15em;
+  > div {
+    height: 100%;
+  }
+  .logo-home {
+    max-height: 90%;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    left: 0;
     margin-left: auto;
     margin-right: auto;
-  }  
+    @media (max-width:768px) {
+      // margin-top:-100px;
+      // margin-top:0em;
+    }
+  }
+  .push-bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 15px;
+  }
   hr {
     border-color:white;
   }
@@ -271,14 +338,6 @@ footer {
 }
 
 @media (max-width:768px) {
-  #welcome {
-    .logo-home { 
-      margin-top:0em;
-      margin-bottom: -4em;
-      margin-left: auto;
-      margin-right: auto;
-    } 
-  }
   #valores {
     .col-text {
       padding-left: 25px;

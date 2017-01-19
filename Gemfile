@@ -31,3 +31,5 @@ end
 gem 'hanami-bootstrap'
 gem 'jquery-hanami'
 gem 'sass'
+gem 'slim'
+gem 'coffee-script'
