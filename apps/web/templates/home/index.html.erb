@@ -1,7 +1,7 @@
 <section id="welcome">
   <div class="text-center">
 
-    <%= image "logo-home.png", class: "logo-home" %>
+    <%= image "logo-home.png", class: "img-responsive logo-home" %>
     <h1>Nuevo</h1>
     <hr>
     <button class="btn btn-primary">
@@ -155,3 +155,38 @@
     </p>
   </div>
 </section>
+<section id="contacto">
+  <div class="container">
+    <div class="row  text-center">
+      <div class="col-md-6 col-xs-12">
+        <h1> CONTACTO </h1>
+        <%= render template: 'home/contact_form' %>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <h1> NUESTRA VISIÓN </h1>
+        <p class="content"> 
+          SER UNA EMPRESA REFERENTE EN EL MERCADO <br>
+          DE PRODUCTOS QUÍMICOS DE EXCELENTE CALIDAD.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer >
+  <div class="container">
+    <div class="text-center">
+      <%= image "logo-pie.png" %>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">
+        <%= image "logo_vsl.png" %>
+      </div>
+      <div class="col-xs-8 text-center">
+        <p style="font-size:0.9em">2017 - PERVAL - TODOS LOS DERECHOS RESERVADOS. | VENTAS@PERVAL.COM.AR | <br>
+        Tel.: 4844 3288 // 2047 4660</p>
+      </div>
+      <div class="col-xs-2">
+        <%= image "logo_face.png" %>
+      </div>
+    </div>
+</footer>
