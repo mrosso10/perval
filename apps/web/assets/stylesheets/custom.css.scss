@@ -1,4 +1,12 @@
 
+$main-pink: #cc0066;
+
+hr { 
+  margin-left: 45%;
+  margin-right: 45%;
+  border-color: $main-pink;
+}
+
 
 .navbar {
   height:4em;
@@ -12,9 +20,14 @@
       margin:0;
       margin-left: 20%;
       li {
-          padding-left:1em !important;
-          padding-right:1em !important;
-          padding-top:1.5em;
+          padding-left:1em ;
+          padding-right:1em ;
+          padding-top:1.3em;
+      }
+      li.separator{
+        padding-top: 1.2em;
+        padding-left:0;
+        padding-right:0;
       }
     }
   }
@@ -39,9 +52,157 @@
     margin-bottom: -15em;
   }  
   hr {
-    margin-left: 45%;
-    margin-right: 45%;
+    border-color:white;
   }
+  .btn-primary {
+    background-color: white;
+    border-color: white;
+    color:black;
+  }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
+    background-color: white;
+    border-color: white;
+    color:black;
+  }
+ 
 }
 
 
+#expertise {
+
+  background: url('/assets/fondo.jpg') repeat center center fixed; 
+//  -webkit-background-size: cover;
+ // -moz-background-size: cover;
+ // -o-background-size: cover;
+ // background-size: cover;
+  color: black;
+  
+  h1{
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+  }
+  .circular-img {
+    text-align: center;
+    height:100px;
+    width:100px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    -webkit-border-radius:  50%;
+    -moz-border-radius:  50%;   
+  }
+
+  .img-casa {
+    background: url('/assets/logo-casa.png') no-repeat  ; 
+    background-size: 100px auto;
+  }
+
+  .img-farmacia {
+    background: url(/assets/logo-farmacia.png) no-repeat  ; 
+    background-size: 100px auto;
+  }
+
+  .img-personal {
+    background: url(/assets/logo-personal.png) no-repeat  ; 
+    background-size: 100px auto;
+  }
+  .btn-primary {
+    margin-top:4em;
+    margin-bottom: 6em;
+    background-color: $main-pink;
+    border-color: $main-pink;
+    color:white;
+    padding: .7em 3em;
+  }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
+    background-color: $main-pink;
+    border-color: $main-pink;
+    color:white;
+  }
+}
+
+#tipo-lavado {
+  font-weight: bold;
+  padding-top:5em; 
+  padding-bottom: 2em;
+  .row {
+    margin-top:2em;
+  }
+  .subtitulo {
+    font-size: 1.2em;
+  }
+  .descripcion-lavado {
+    color:gray;
+    font-size:1em;
+  }
+}
+
+#ventas {
+  color:white;
+  background: url('/assets/fondo-ciudad.jpg') no-repeat center center fixed;
+  background-size: cover;
+  h2 {
+    margin-top: 2em;
+  }
+  .row {
+    margin-top:4em;
+    margin-bottom: 4em;
+  }
+  .btn-mayorista {
+    margin-top:4em;
+    margin-bottom: 4em;
+    background-color: $main-pink;
+    border-color: $main-pink;
+    color:white;
+    padding: .7em 3em;
+  }
+  .btn-mayorista:hover, .btn-mayorista:active, .btn-mayorista:focus, .btn-mayorista:active:focus {
+    background-color: #73264d;
+    border-color: #73264d;
+  }
+  .btn-minorista {
+    margin-top:4em;
+    margin-bottom: 4em;
+    background-color: #0073e6;
+    border-color: #0073e6;
+    color:white;
+    padding: .7em 3em;
+  }
+  .btn-minorista:hover, .btn-minorista:active, .btn-minorista:focus, .btn-minorista:active:focus {
+    background-color: #003366;
+    border-color: #003366;
+  }
+  .col-md-6,.col-xs-12 {
+    background-color: none;
+    .col-md-12,.col-xs-12 { 
+      background-color: rgba(255,255,255,0.5);
+    }
+  }
+}
+
+#valores {
+  .subtitulo {
+    font-weight: bold;
+    color: $main-pink;
+  }
+  .content {
+    color:gray;
+    font-weight: bold;
+    margin-bottom: 2em;
+  }
+  .col-text {
+    padding-left:20%;
+  }
+}
+
+#mision {
+  padding-top:1em;
+  padding-bottom: 1em;
+  font-size: 1.5em;
+  background-color: $main-pink;
+  color: white;
+  hr {
+    margin-right: 48%;
+    margin-left: 48%;
+    border-color: #003366;
+  }
+}
