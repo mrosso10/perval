@@ -14,9 +14,6 @@ hr {
   margin-right: 45%;
   border-color: $main-pink;
 }
-  .icon-bar {
-    border-bottom: 2px solid black;
-  }
 
 .barra-navegacion {
   position: fixed;
@@ -63,40 +60,13 @@ hr {
   }
 }
 
-// .navbar {
-//   height:4em;
-//   margin-bottom: 0;
-//   background: rgba(255, 255, 255,0.9);
-//   border-color: transparent;
-//   font-size: 1em;
-
-
-//   .navbar-collapse {
-//     ul {
-//       margin:0;
-//       margin-left: 20%;
-//       li {
-//           padding-left:1em ;
-//           padding-right:1em ;
-//           padding-top:1.3em;
-//       }
-//       li.separator{
-//         padding-top: 1.2em;
-//         padding-left:0;
-//         padding-right:0;
-//       }
-//     }
-//   }
-// }
-
+.sliding-background {
+  background-attachment: fixed;
+  background-position: 50% 0px;
+}
 
 #welcome {
-  background: url('/assets/fondo-02.jpg') fixed; 
-  background-position: 50% 0%;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
+  background-image: url('/assets/fondo-02.jpg'); 
   color: white;
   > div {
     height: 100%;
@@ -109,10 +79,6 @@ hr {
     left: 0;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width:768px) {
-      // margin-top:-100px;
-      // margin-top:0em;
-    }
   }
   .push-bottom {
     position: absolute;
@@ -137,20 +103,15 @@ hr {
  
 }
 
-
 #expertise {
-
-  background: url('/assets/fondo.jpg') repeat center center fixed; 
-//  -webkit-background-size: cover;
- // -moz-background-size: cover;
- // -o-background-size: cover;
- // background-size: cover;
+  background-image: url('/assets/fondo-expertise.jpg');
   color: black;
   
-  h1{
+  h1 {
     margin-top: 3em;
     margin-bottom: 1.5em;
   }
+  
   .circular-img {
     text-align: center;
     height:100px;
@@ -162,17 +123,17 @@ hr {
   }
 
   .img-casa {
-    background: url('/assets/logo-casa.png') no-repeat  ; 
+    background-image: url(/assets/logo-casa.png); 
     background-size: 100px auto;
   }
 
   .img-farmacia {
-    background: url(/assets/logo-farmacia.png) no-repeat  ; 
+    background-image: url(/assets/logo-farmacia.png); 
     background-size: 100px auto;
   }
 
   .img-personal {
-    background: url(/assets/logo-personal.png) no-repeat  ; 
+    background-image: url(/assets/logo-personal.png); 
     background-size: 100px auto;
   }
   .btn-primary {
@@ -208,8 +169,7 @@ hr {
 
 #ventas {
   color:white;
-  background: url('/assets/fondo-ciudad.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/fondo-ciudad.jpg');
   h2 {
     margin-top: 2em;
   }
@@ -279,8 +239,7 @@ hr {
 
 #contacto {
   color:white;
-  background: url('/assets/fondo-contacto.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-image: url('/assets/fondo-contacto.jpg');
   padding-bottom: 3em;
   h1 {
     margin-top: 2em;

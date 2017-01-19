@@ -19,7 +19,9 @@ $(document).ready ->
     opacity: 1,
   }, 1000);
 
-$(document).scroll ->
-  x = $('body').scrollTop()
-  console.log(x)
-  $("#welcome").css('background-position','50% '+parseInt(0 + x/10)+'%')
+  $(".sliding-background").each (index, section) ->
+    offset = parseInt($(section).attr('data-offset'))
+    offset = 0 unless offset > 0
+    $(document).scroll ->
+      x = $(this).scrollTop()
+      $(section).css('background-position','50% '+parseInt(offset-x*1.2)+'px')
