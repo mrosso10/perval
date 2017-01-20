@@ -4,7 +4,7 @@ section.sliding-background#welcome
     .push-bottom
       h1.bold Nuevo
       hr
-      button.btn.btn-primary
+      a.btn.btn-primary href="#expertise"
         | Conocenos
 section.sliding-background#expertise
   .container
@@ -20,7 +20,7 @@ section.sliding-background#expertise
         .circular-img.img-personal
         | Cuidado personal
     .text-center
-      button.btn.btn-primary
+      a.btn.btn-primary href="#contacto"
         | Contactanos
 section#tipo-lavado
   .container
@@ -115,7 +115,8 @@ section.sliding-background#contacto data-offset="290"
 footer
   .container
     .text-center
-      = image "logo-pie.png"
+      a href="#welcome"
+        = image "logo-pie.png"
     .row
       .col-xs-2
         = image "logo_vsl.png"

@@ -70,3 +70,15 @@ spinner = new Spinner(
   hwaccel: false
   position: 'relative'
 )
+
+
+$(document).ready ->
+  $("a").on 'click', (event) ->
+    if this.hash != ""
+      event.preventDefault()
+      hash = this.hash
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 50
+      }, 800, ->
+        window.location.hash = hash
+      )
