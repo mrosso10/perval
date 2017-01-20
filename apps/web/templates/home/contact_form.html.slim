@@ -1,12 +1,18 @@
-form#new_message.new_message accept-charset="UTF-8" action="/messages" method="post" 
-  .field
-    input#message_name name="message[name]" placeholder=("Introduce tu nombre") type="text"
-  .field
-    input#message_email name="message[email]" placeholder=("Introduce tu mail") type="email"
-  .field
-    input#message_tel name="message[tel]" placeholder=("Introduce tu teléfono") type="text"
-  .field
-    textarea#message_content name="message[content]" placeholder=("Escribe tu mensaje") 
+form.new_message accept-charset="UTF-8" action="/messages" method="post" 
+  .fields.collapse.in
+    .field
+      input name="name" placeholder="Introduce tu nombre" type="text"
+    .field
+      input name="email" placeholder="Introduce tu mail" type="email"
+    .field
+      input name="tel" placeholder="Introduce tu teléfono" type="text"
+    .field
+      textarea name="content" placeholder="Escribe tu mensaje" 
   .text-left
+    .message.success-message.text-success.bold style="display:none"
+      | Gracias por contactarse con nosotros
+    .message.error-message.text-danger.bold style="display:none"
+      | Hubo un error. Intente nuevamente por favor.
     .actions
-      input#submit-contact.btn.btn-primary data-disable-with="Enviar" name="commit" type="submit" value="ENVIAR"
+      .spinner-container
+      input.btn.btn-primary data-disable-with="Enviar" name="commit" type="button" value="ENVIAR"
