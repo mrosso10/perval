@@ -148,6 +148,8 @@ GEM
     thor (0.19.4)
     tilt (2.0.5)
     transproc (0.4.1)
+    uglifier (3.0.4)
+      execjs (>= 0.3.0, < 3)
     url_mount (0.2.1)
       rack
     wisper (1.6.1)
@@ -173,6 +175,7 @@ DEPENDENCIES
   sass
   shotgun
   slim
+  uglifier
 
 BUNDLED WITH
    1.13.7

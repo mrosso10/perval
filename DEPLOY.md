@@ -16,5 +16,6 @@ create role perval password 'perval' createdb login;
 
 bundle exec hanami db create
 
-puma -b unix:///var/www/perval/tmp/sockets/perval-puma.sock -d
+bundle exec hanami assets precompile
 
+puma -e production -b unix:///var/www/perval/tmp/sockets/perval-puma.sock -d
