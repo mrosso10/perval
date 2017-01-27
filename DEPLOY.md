@@ -19,3 +19,5 @@ bundle exec hanami db create
 bundle exec hanami assets precompile
 
 puma -e production -b unix:///var/www/perval/tmp/sockets/perval-puma.sock -d
+
+pkill -f perval-puma.sock
