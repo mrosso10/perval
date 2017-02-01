@@ -1,5 +1,8 @@
-
 $main-pink: #cc0066;
+
+body {
+  font-family: 'Sintony', sans-serif;
+}
 
 h1 {
   font-size: 59px;
@@ -18,7 +21,7 @@ hr {
 .barra-navegacion {
   position: fixed;
   top: 0;
-  z-index: 99999999;
+  z-index: 1000;
   width: 100%;
   background-color: rgba(255, 255, 255,0.9);
   .container {
@@ -314,4 +317,10 @@ footer {
       padding-left: 25px;
     }
   }
+}
+
+
+
+.modal-body {
+  height: 400px;
 }

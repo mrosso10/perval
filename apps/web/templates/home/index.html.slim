@@ -6,7 +6,7 @@ section.sliding-background#welcome
       hr
       a.btn.btn-primary href="#expertise"
         | Conocenos
-section.sliding-background#expertise
+section.sliding-background#expertise style="padding-top: 60px"
   .container
     .row.text-center
       h2 10 AÑOS DE EXPERIENCIA EN PRODUCTOS QUÍMICOS
@@ -28,7 +28,7 @@ section#tipo-lavado
       .col-md-6.col-xs-12.text-center
         h2 TIPOS DE LAVADO
         hr
-        p.descripcion-lavado Jabón líquido
+        p.descripcion-lavado style="color:inherit" Jabón líquido
         .row
           .col-xs-3
             = image "001_-lavado-normal.png"
@@ -65,11 +65,11 @@ section.sliding-background#ventas data-offset="200"
     .row
       .col-md-6.col-xs-12.text-center
         .col-md-12.col-xs-12
-          button.btn.btn-mayorista
+          button.btn.btn-mayorista data-toggle="modal" data-target="#mayoristas"
             | MAYORISTAS
       .col-md-6.col-xs-12.text-center
         .col-md-12.col-xs-12
-          button.btn.btn-minorista
+          button.btn.btn-minorista data-toggle="modal" data-target="#minoristas"
             | MINORISTAS
 section#valores
   .container
@@ -122,8 +122,17 @@ footer
         = image "logo_vsl.png"
       .col-xs-8.text-center
         p style="font-size:0.9em" 
-          | 2017 - PERVAL - TODOS LOS DERECHOS RESERVADOS. | VENTAS@PERVAL.COM.AR
+          | &copy; 2017 - PERVAL - TODOS LOS DERECHOS RESERVADOS. | VENTAS@PERVAL.COM.AR |
           br
           | Tel.: 4844 3288 // 2047 4660
       .col-xs-2
         = image "logo_face.png"
+
+.modal.fade#mayoristas tabindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-body
+.modal.fade#minoristas tabindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-body
