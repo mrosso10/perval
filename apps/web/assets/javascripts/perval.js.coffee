@@ -44,9 +44,7 @@ $(document).ready ->
       $('form .success-message').show()
       $(".fields").collapse('hide')
     ).error ->
-      $('form .success-message').show()
-      $(".fields").collapse('hide')
-      # $('form .error-message').show()
+      $('form .error-message').show()
 
 spinner = new Spinner(
   lines: 11
