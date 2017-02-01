@@ -1,13 +1,13 @@
 form.new_message accept-charset="UTF-8" action="/contacto.php" method="post" 
   .fields.collapse.in
     .field
-      input name="name" placeholder="Introduce tu nombre" type="text"
+      input name="name" placeholder="Introduce tu nombre" type="text" required="true"
     .field
-      input name="email" placeholder="Introduce tu mail" type="email"
+      input name="email" placeholder="Introduce tu mail" type="email" required="true"
     .field
-      input name="tel" placeholder="Introduce tu teléfono" type="text"
+      input name="tel" placeholder="Introduce tu teléfono" type="text" required="true"
     .field
-      textarea name="content" placeholder="Escribe tu mensaje" 
+      textarea name="content" placeholder="Escribe tu mensaje" required="true"
   .text-left
     .message.success-message.text-success.bold style="display:none"
       | Gracias por contactarse con nosotros
@@ -15,4 +15,4 @@ form.new_message accept-charset="UTF-8" action="/contacto.php" method="post"
       | Hubo un error. Intente nuevamente por favor.
     .actions
       .spinner-container
-      input.btn.btn-primary data-disable-with="Enviar" name="commit" type="button" value="ENVIAR"
+      input.btn.btn-primary data-disable-with="Enviar" name="commit" type="submit" value="ENVIAR"

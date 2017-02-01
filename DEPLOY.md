@@ -21,3 +21,6 @@ bundle exec hanami assets precompile
 puma -e production -b unix:///var/www/perval/tmp/sockets/perval-puma.sock -d
 
 pkill -f perval-puma.sock
+
+
+kill `cat tmp/pids/puma.pid`; puma -b unix:///var/www/perval/tmp/sockets/perval-puma.sock -d -e production --pidfile tmp/pids/puma.pid # restart

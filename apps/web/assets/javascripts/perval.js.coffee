@@ -26,24 +26,16 @@ $(document).ready ->
       x = $(this).scrollTop()
       $(section).css('background-position','50% '+parseInt(offset-x*1.3)+'px')
 
-  $('form input[type=button]').click ->
-    name = $('form input[name=name]')
-    email = $('form input[name=email]')
-    tel = $('form input[name=tel]')
-    content = $('form textarea[name=content]')
-    $('form .actions input').hide()
-    spinner.spin($('.spinner-container')[0])
-    $.post($('form').attr('action'), {
-      'name': name.val(),
-      'email': email.val(),
-      'tel': tel.val(),
-      'content': content.val(),
-    }).complete(-> 
+  $('form').ajaxForm
+    beforeSubmit: ->
+      $('form .actions input').hide()
+      spinner.spin($('.spinner-container')[0])
+    complete: ->
       spinner.stop()
-    ).success( -> 
+    success: ->
       $('form .success-message').show()
       $(".fields").collapse('hide')
-    ).error ->
+    error: ->
       $('form .error-message').show()
 
 spinner = new Spinner(
