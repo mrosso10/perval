@@ -1,11 +1,13 @@
 section.sliding-background#welcome
-  .text-center.fadeIn style="opacity: .3"
+  .text-center.wow.fadeIn
     = image "logo-home.png", class: "img-responsive logo-home"
     .push-bottom
-      h1.bold Nuevo
+      .wow.fadeInRight
+        h1.bold Nuevo
       hr
-      a.btn.btn-primary href="#expertise"
-        | Conocenos
+      .wow.fadeInRight data-wow-delay="200ms"
+        a.btn.btn-primary href="#expertise"
+          | Conocenos
 section.sliding-background#expertise style="padding-top: 60px"
   .container
     .row.text-center
@@ -29,19 +31,19 @@ section#tipo-lavado
         h2 TIPOS DE LAVADO
         hr
         p.descripcion-lavado style="color:inherit" Jabón líquido
-        .row
+        .row.wow.fadeInLeft
           .col-xs-3
             = image "001_-lavado-normal.png"
           .col-xs-9.text-left
             p.subtitulo LAVADO NORMAL:
             p.descripcion-lavado Mida 100 ml (equivale aproximadamente a media taza de té).
-        .row
+        .row.wow.fadeInLeft
           .col-xs-3
             = image "002_ropa-sucia.png"
           .col-xs-9.text-left
             p.subtitulo ROPA MUY SUCIA:
             p.descripcion-lavado Mida 150 ml.
-        .row
+        .row.wow.fadeInLeft
           .col-xs-3
             = image "003_dificiles.png"
           .col-xs-9.text-left
@@ -49,15 +51,16 @@ section#tipo-lavado
             p.descripcion-lavado
               | De la medida seleccionada, aplique una pequeña cantidad de Jabón líquido PERVAL directamente sobre la mancha y frote.
               | Vierta el resto de la medida en el lavarropas.
-        .row
+        .row.wow.fadeInLeft
           .col-xs-3
             = image "004_lavado-a-mano.png"
           .col-xs-9.text-left
             p.subtitulo LAVADO A MANO:
             p.descripcion-lavado Coloque en un balde 100 ml de Jabón líquido PERVAL para diez litros de agua y disuelva completamente.
       .col-md-6.col-xs-12
-        = image "producto.png", style: "float:left;position:absolute;max-height:100%; "
-        = image "lavarropas.png", style:"float:right; margin-top: 12em;"
+        .wow.fadeIn data-wow-offset="200"
+          = image "producto.png", style: "float:left;position:absolute;max-height:100%; "
+          = image "lavarropas.png", style:"float:right; margin-top: 12em;"
 section.sliding-background#ventas data-offset="200"
   .container.text-center
     h2 VENTAS

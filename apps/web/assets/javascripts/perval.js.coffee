@@ -15,9 +15,9 @@ $(document).ready ->
 
   $('header').hide()
 
-  $('.fadeIn').animate({
-    opacity: 1,
-  }, 1000);
+  # $('.fadeIn').animate({
+  #   opacity: 1,
+  # }, 1000);
 
   $(".sliding-background").each (index, section) ->
     offset = parseInt($(section).attr('data-offset'))
@@ -62,7 +62,9 @@ spinner = new Spinner(
 )
 
 
+
 $(document).ready ->
+  new WOW().init()
   $("a").on 'click', (event) ->
     if this.hash != ""
       event.preventDefault()
