@@ -64,6 +64,10 @@ hr {
   }
 }
 
+.fixed-sliding-background {
+  background-attachment: fixed;
+  background-position: 50% 0px;
+}
 .sliding-background {
   background-attachment: static;
   background-position: 50% 0px;

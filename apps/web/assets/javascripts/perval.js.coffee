@@ -19,7 +19,7 @@ $(document).ready ->
   update_home_height()
 
   if not isMobile
-    new WOW().init()
+    new FLIMP().init()
     
     $(".sliding-background").each (index, section) ->
       offset = parseInt($(section).attr('data-offset'))
@@ -27,6 +27,12 @@ $(document).ready ->
       $(document).scroll ->
         x = $(this).scrollTop()
         $(section).css('background-position','50% '+parseInt(offset-x*0.20)+'px')
+    $(".fixed-sliding-background").each (index, section) ->
+      offset = parseInt($(section).attr('data-offset'))
+      offset = 0 unless offset > 0
+      $(document).scroll ->
+        x = $(this).scrollTop()
+        $(section).css('background-position','50% '+parseInt(offset-x*0.1)+'px')
 
   $('header').hide()
 
