@@ -321,6 +321,33 @@ footer {
     .col-text {
       padding-left: 25px;
     }
+  }  
+  #contacto {
+    .actions {
+      width:100%  ;
+    }
+    .col-xs-12 {
+      .content {
+        br {
+          display:none;
+        }
+      }
+    }
+  }
+  #ventas {
+    .col-xs-12 {
+      margin-bottom: 1em;
+    }
+  }
+  #tipo-lavado {
+    .col-xs-9 {
+      padding-left: 2em;
+    }
+  }
+  footer {
+    .col-xs-2 {
+      padding-left: 0;
+    }
   }
 }
 
