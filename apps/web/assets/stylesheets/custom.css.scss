@@ -62,6 +62,15 @@ hr {
       }
     }
   }
+  .menu-mobile {
+    overflow: hidden;
+
+    ul {
+      li {
+        display: block;
+      }
+    }
+  }
 }
 
 .fixed-sliding-background {

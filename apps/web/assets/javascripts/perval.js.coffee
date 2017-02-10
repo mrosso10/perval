@@ -71,13 +71,15 @@ spinner = new Spinner(
   position: 'relative'
 )
 
-
+window.toggle_menu_mobile = ->
+  $('.menu-mobile').collapse('toggle')
 
 $(document).ready ->
   $("a").on 'click', (event) ->
     if this.hash != ""
       event.preventDefault()
       hash = this.hash
+      toggle_menu_mobile()
       $('html, body').animate({
         scrollTop: $(hash).offset().top - 50
       }, 800, ->
