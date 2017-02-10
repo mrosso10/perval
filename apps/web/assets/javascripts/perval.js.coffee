@@ -79,7 +79,8 @@ $(document).ready ->
     if this.hash != ""
       event.preventDefault()
       hash = this.hash
-      toggle_menu_mobile()
+      if $(this).closest('.menu-mobile').length > 0
+        toggle_menu_mobile()
       $('html, body').animate({
         scrollTop: $(hash).offset().top - 50
       }, 800, ->
