@@ -327,6 +327,9 @@ hr {
 footer {
   background-color: #1f004d;
   color:white;
+  a {
+    color: #777;
+  }
 }
 
 @media (max-width:768px) {
