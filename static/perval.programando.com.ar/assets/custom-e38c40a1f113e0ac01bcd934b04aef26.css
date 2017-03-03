@@ -1,7 +1,8 @@
+body {font-family: 'Sintony', sans-serif; overflow-x: hidden}
 h1 {font-size: 59px}
 .bold {font-weight: bold}
 hr {margin-left: 45%; margin-right: 45%; border-color: #cc0066}
-.barra-navegacion {position: fixed; top: 0; z-index: 99999999; width: 100%; background-color: rgba(255, 255, 255, 0.9)}
+.barra-navegacion {position: fixed; top: 0; z-index: 1000; width: 100%; background-color: rgba(255, 255, 255, 0.9)}
 .barra-navegacion .container {display: flex}
 .barra-navegacion .container > div {display: inline-block; vertical-align: top; flex: 1}
 .barra-navegacion .barra-left {height: 50px}
@@ -11,7 +12,10 @@ hr {margin-left: 45%; margin-right: 45%; border-color: #cc0066}
 .barra-navegacion ul li {display: inline-block; margin: 0 10px}
 .barra-navegacion ul li a, .barra-navegacion ul li i {color: #616161}
 .barra-navegacion ul li a {vertical-align: sub; font-weight: bold}
-.sliding-background {background-attachment: fixed; background-position: 50% 0px}
+.barra-navegacion .menu-mobile {overflow: hidden}
+.barra-navegacion .menu-mobile ul li {display: block}
+.fixed-sliding-background {background-attachment: fixed; background-position: 50% 0px}
+.sliding-background {background-attachment: static; background-position: 50% 0px}
 #welcome {background-image: url("/assets/fondo-02.jpg"); color: white}
 #welcome > div {height: 100%}
 #welcome .logo-home {max-height: 90%; position: absolute; top: -100px; right: 0; left: 0; margin-left: auto; margin-right: auto}
@@ -23,7 +27,7 @@ hr {margin-left: 45%; margin-right: 45%; border-color: #cc0066}
 #expertise h1 {margin-top: 3em; margin-bottom: 1.5em}
 #expertise .circular-img {text-align: center; height: 100px; width: 100px; margin: 0 auto 20px auto; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%}
 #expertise .img-casa {background-image: url(/assets/logo-casa.png); background-size: 100px auto}
-#expertise .img-farmacia {background-image: url(/assets/logo-farmacia.png); background-size: 100px auto}
+#expertise .img-cuidado-de-la-ropa {background-image: url(/assets/cuidado-de-la-ropa.png); background-size: 105px auto}
 #expertise .img-personal {background-image: url(/assets/logo-personal.png); background-size: 100px auto}
 #expertise .btn-primary {margin-top: 4em; margin-bottom: 6em; background-color: #cc0066; border-color: #cc0066; color: white; padding: .7em 3em}
 #expertise .btn-primary:hover, #expertise .btn-primary:active, #expertise .btn-primary:focus, #expertise .btn-primary:active:focus {background-color: #cc0066; border-color: #cc0066; color: white}
@@ -42,7 +46,9 @@ hr {margin-left: 45%; margin-right: 45%; border-color: #cc0066}
 #ventas .col-md-6 .col-md-12, #ventas .col-md-6 .col-xs-12, #ventas .col-xs-12 .col-md-12, #ventas .col-xs-12 .col-xs-12 {background-color: rgba(255, 255, 255, 0.5)}
 #valores .subtitulo {font-weight: bold; color: #cc0066}
 #valores .content {color: gray; font-weight: bold; margin-bottom: 2em}
-#valores .col-text {padding-left: 20%}
+#valores .foto-producto {height: 740px}
+@media (max-width: 991px) {#valores .foto-producto {width: 100%; height: 100%}
+}
 #mision {padding-top: 1em; padding-bottom: 1em; font-size: 1.5em; background-color: #cc0066; color: white}
 #mision hr {margin-right: 48%; margin-left: 48%; border-color: #003366}
 #contacto {color: white; background-image: url("/assets/fondo-contacto.jpg")}
@@ -60,5 +66,11 @@ hr {margin-left: 45%; margin-right: 45%; border-color: #cc0066}
 #contacto .btn-primary {margin-top: 1em; background-color: #cc0066; border-color: #cc0066; color: white; padding: .5em 4em; width: 100%}
 #contacto .btn-primary:hover, #contacto .btn-primary:active, #contacto .btn-primary:focus, #contacto .btn-primary:active:focus {background-color: #cc0066; border-color: #cc0066; color: white}
 footer {background-color: #1f004d; color: white}
-@media (max-width: 768px) {#valores .col-text {padding-left: 25px}
+footer a {color: #777}
+@media (max-width: 768px) {#contacto .actions {width: 100%}
+#contacto .col-xs-12 .content br {display: none}
+#ventas .col-xs-12 {margin-bottom: 1em}
+#tipo-lavado .col-xs-9 {padding-left: 2em}
+footer .col-xs-2 {padding-left: 0}
 }
+.modal-body {height: 400px}
