@@ -1,34 +1,30 @@
 <?php
-  $MailToAddress = "mrosso10@gmail.com";
+  $MailToAddress = "ventas@perval.com.ar";
   $MailSubject = "www.perval.com.ar - Email desde WEB";
-  if (! isset($MailFromAddress) ) {
-    $MailFromAddress = "info@perval.com.ar";
-  }
+  $MailFromAddress = "Perval WEB <web@perval.com.ar>";
 
   $Header = "Contacto:";
   $Message = $Footer = "";
 
-  if (!is_array($_POST))
+  if (!is_array($_POST)) {
+    header("$_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error'", true, 500);
     return;
-  reset($_POST);
-  while(list($key, $val) = each($_POST)) {
-    $GLOBALS[$key] = $val;
-    $val=stripslashes($val);
-    $Message .= "$key = $val\n";
   }
 
-  if ($Header) {
-    $Message = $Header."\n\n".$Message."\n\n";
-  }
-  $REMOTE_USER = (isset($_SERVER["REMOTE_USER"]))?$_SERVER["REMOTE_USER"]:"";
+  $Message .= "Nombre: ".$_POST['name']."\n";
+  $Message .= "Email: ".$_POST['email']."\n";
+  $Message .= "Teléfono: ".$_POST['tel']."\n";
+  $Message .= "Mensaje: ".$_POST['content']."\n";
+
+  $Message = $Header."\n\n".$Message."\n\n";
+
   $REMOTE_ADDR = (isset($_SERVER["REMOTE_ADDR"]))?$_SERVER["REMOTE_ADDR"]:"";
-  $Message .= "REMOTE USER: ". $REMOTE_USER."\n";
   $Message .= "REMOTE ADDR: ". $REMOTE_ADDR."\n";
 
   if ($Footer) {
     $Message .= "\n\n".$Footer;
   }
 
-  $resp = mail( "$MailToAddress", "$MailSubject", "$Message", "From: $MailFromAddress");
-  var_dump($resp);
-  // header ("Location: http://DOMINIO/CONFIRMACION_DE_RECEPCION");
+  if( !mail( "$MailToAddress", "$MailSubject", "$Message", "From: $MailFromAddress") ) {
+    header("$_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error'", true, 500);
+  }
