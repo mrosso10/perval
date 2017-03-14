@@ -7,7 +7,7 @@
   $Message = $Footer = "";
 
   if (!is_array($_POST)) {
-    header("$_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error'", true, 500);
+    header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
     return;
   }
 
@@ -26,5 +26,5 @@
   }
 
   if( !mail( "$MailToAddress", "$MailSubject", "$Message", "From: $MailFromAddress") ) {
-    header("$_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error'", true, 500);
+    header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
   }
